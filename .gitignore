@@ -1,0 +1,43 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+
+# VS Code - keep extensions.json and settings.json, drop generated files
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch/
+
+# Build/test logs from tools/build.sh
+logs/
+
+# Build output
+*.hex
+*.uf2
+*.elf
+*.bin
+*.map
+
+# Datasheets fetched by docs/datasheets/fetch_datasheets.sh
+docs/datasheets/*.pdf
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------------------------
+# Vendor documents are FETCHED, not redistributed. The datasheets, the KiCad
+# schematic/PCB project and the pinout sheet are Seeed / Nordic / Semtech
+# copyright - republishing them here would be a licensing problem, it is 30 MB,
+# and the Seeed archive contains its own nested .git which git would try to
+# treat as a submodule. docs/datasheets/fetch_datasheets.sh retrieves them.
+docs/datasheets/*
+!docs/datasheets/README.md
+!docs/datasheets/fetch_datasheets.sh
+
+# Superseded sources and tool self-test artefacts, kept only until deleted
+# (device_bash cannot delete, so they accumulate here)
+_to_delete/
